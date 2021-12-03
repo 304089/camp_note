@@ -60,3 +60,5 @@ gem 'html2slim'
 gem "refile", require: "refile/rails", github: 'manfe/refile'
 gem "refile-mini_magick"
 gem 'devise'
+gem 'bootstrap', '~> 4.5'
+gem 'jquery-rails'
