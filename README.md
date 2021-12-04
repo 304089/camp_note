@@ -1,24 +1,9 @@
-# README
+# camp note
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## サイト概要
+キャンプ計画・ギア管理アプリ
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+## 環境
+- macOS　Big Sur(11.3.1)
+- ruby 2.7.5
+- Rails 6.1.4.1
