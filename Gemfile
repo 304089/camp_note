@@ -62,3 +62,4 @@ gem "refile-mini_magick"
 gem 'devise'
 gem 'bootstrap', '~> 4.5'
 gem 'jquery-rails'
+gem 'devise-i18n'
