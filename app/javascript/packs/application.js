@@ -13,6 +13,10 @@ Turbolinks.start()
 ActiveStorage.start()
 
 import 'bootstrap';
-import '../stylesheets/application';
 
-require("jquery")
+require('jquery')
+require("bootstrap")
+require("@fortawesome/fontawesome-free");
+/* javascript個別読み込み */
+require('users.js')
+import '../src/application.scss'
