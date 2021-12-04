@@ -2,9 +2,6 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
 .user_show_area {
-  min-height: 100vh;
-  position: relative;
-  top: 80px;
 }
 .profile_area {
   background: cornflowerblue;
@@ -20,22 +17,19 @@
 .user_edit_area {
   width: 80%;
   margin: 0 auto;
-  position: relative;
-  top: 100px;
-  padding-bottom: 20px;
   border-radius: 5px;
   border: 1px solid #1e7e34;
   &__title {
     text-align: center;
     background: #1e7e34;
     color: white;
-    padding: 10px 0;
   }
   &__form {
-    width: 50%;
     margin: 0 auto;
     &__item {
-      margin: 50px;
+    }
+    .edit_name input {
+      width: 300px;
     }
   }
 }

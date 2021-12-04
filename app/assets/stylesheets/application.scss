@@ -35,8 +35,23 @@ a {
   color: inherit !important;
 }
 
+header {
+  height: 70px;
+  background: cornflowerblue;
+  width: 100%;
+  position: fixed; /* ウィンドウを基準に画面に固定 */
+  top: 0; /* 上下の固定位置を上から0pxにする */
+  left: 0; /* 左右の固定位置を左から0pxにする */
+  display: flex; /* 中の要素を横並びにする */
+  ul {
+    display: flex;
+  }
+}
+
 .container {
-  min-height: 100vh;
+  min-height: 90vh;
+  position: absolute;
+  top: 60px;
   background-image: url("background.jpg");
   background-size: 100% 100%;
   background-repeat: no-repeat;
@@ -71,5 +86,10 @@ a {
     .btn {
       padding: 5px 40px;
     }
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .container {
   }
 }

@@ -1,0 +1,6 @@
+ul 
+  li
+    .header_item
+      - if user_signed_in?
+        = link_to user_path(@user) do 
+          i.fas.fa-user-circle
