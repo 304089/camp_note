@@ -1,28 +1,26 @@
-h2
-  | 新規登録
-= form_with model: @user, url: user_registration_path, local: true do |f|
-  = render "devise/shared/error_messages", resource: resource
-  .field
-    = f.label :name
-  br
-  = f.text_field :name
-  .field
-    = f.label :email
-  br
-  = f.email_field :email
-  .field
-    = f.label :password
-    - if @minimum_password_length
-      em
-        | (
-        = @minimum_password_length
-        |  characters minimum)
-  br
-  = f.password_field :password, autocomplete: "new-password"
-  .field
-    = f.label :password_confirmation
-  br
-  = f.password_field :password_confirmation, autocomplete: "new-password"
-  .actions
-    = f.submit "登録", class: "btn btn-success btn-lg"
-= render "devise/shared/links"
+.session_form_area
+  .session_form_area__content
+    h2
+      | 新規登録
+    = form_with model: @user, url: user_registration_path, local: true do |f|
+      = render "devise/shared/error_messages", resource: resource
+      .field
+        = f.label :name
+      = f.text_field :name
+      .field
+        = f.label :email
+      = f.email_field :email
+      .field
+        = f.label :password
+        - if @minimum_password_length
+          em
+            | (
+            = @minimum_password_length
+            |  文字以上)
+      = f.password_field :password, autocomplete: "new-password"
+      .field
+        = f.label :password_confirmation
+      = f.password_field :password_confirmation, autocomplete: "new-password"
+      .actions
+        = f.submit "登録", class: "btn btn-success"
+    = render "devise/shared/links"

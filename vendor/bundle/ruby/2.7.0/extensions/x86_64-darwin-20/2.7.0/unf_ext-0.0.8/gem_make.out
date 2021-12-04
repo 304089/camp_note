@@ -1,0 +1,16 @@
+current directory: /Users/yuichirou/camp_note/vendor/bundle/ruby/2.7.0/gems/unf_ext-0.0.8/ext/unf_ext
+/Users/yuichirou/.rbenv/versions/2.7.5/bin/ruby -I /Users/yuichirou/.rbenv/versions/2.7.5/lib/ruby/2.7.0 -r ./siteconf20211204-63288-oivqh2.rb extconf.rb
+checking for -lstdc++... yes
+creating Makefile
+
+current directory: /Users/yuichirou/camp_note/vendor/bundle/ruby/2.7.0/gems/unf_ext-0.0.8/ext/unf_ext
+make "DESTDIR=" clean
+
+current directory: /Users/yuichirou/camp_note/vendor/bundle/ruby/2.7.0/gems/unf_ext-0.0.8/ext/unf_ext
+make "DESTDIR="
+compiling unf.cc
+linking shared-object unf_ext.bundle
+
+current directory: /Users/yuichirou/camp_note/vendor/bundle/ruby/2.7.0/gems/unf_ext-0.0.8/ext/unf_ext
+make "DESTDIR=" install
+/usr/bin/install -c -m 0755 unf_ext.bundle ./.gem.20211204-63288-10lvw2p

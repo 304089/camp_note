@@ -30,7 +30,46 @@ p {
   padding: 0;
 }
 
+a {
+  text-decoration: none !important;
+  color: inherit !important;
+}
+
 .container {
   min-height: 100vh;
-  background: burlywood;
+  background-image: url("background.jpg");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}
+
+// セッションエリア
+.session_form_area {
+  width: 80%;
+  margin: 0 auto;
+  min-height: 100vh;
+
+  &__content {
+    text-align: center;
+    position: relative;
+    top: 100px;
+    width: 80%;
+    margin: 0 auto;
+    border: 1px solid #28a745;
+    padding-bottom: 30px;
+    border-radius: 5px;
+    h2 {
+      background: #28a745;
+      color: white;
+      padding: 10px;
+    }
+    .field {
+      margin-top: 20px;
+    }
+    .actions {
+      margin: 20px 0;
+    }
+    .btn {
+      padding: 5px 40px;
+    }
+  }
 }

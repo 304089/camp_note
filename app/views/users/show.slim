@@ -1,0 +1,9 @@
+.container
+  .user_show_area
+    - if @user == current_user
+      .profile_area
+        = link_to edit_user_path(@user)
+          = render "profile", user: @user
+    - else
+      .profile_area
+        = render "profile", user: @user
