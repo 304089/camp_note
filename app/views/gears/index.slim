@@ -1,38 +1,38 @@
 .container
   .gear_list
-    - if Gear.exists?(genre: 0)
+    - if Gear.mine(current_user).exists?(genre: 0)
       .gear_list__name
         p テント・タープ
       = render "list", gear_num: 0
-    - if Gear.exists?(genre: 1)
+    - if Gear.mine(current_user).exists?(genre: 1)
       .gear_list__name
         p テーブル・チェア
       = render "list", gear_num: 1
-    - if Gear.exists?(genre: 2)
+    - if Gear.mine(current_user).exists?(genre: 2)
       .gear_list__name
         p 調理道具
       = render "list", gear_num: 2
-    - if Gear.exists?(genre: 3)
+    - if Gear.mine(current_user).exists?(genre: 3)
       .gear_list__name
         p 照明器具
       = render "list", gear_num: 3
-    - if Gear.exists?(genre: 4)
+    - if Gear.mine(current_user).exists?(genre: 4)
       .gear_list__name
         p 焚き火道具
       = render "list", gear_num: 4
-    - if Gear.exists?(genre: 5)
+    - if Gear.mine(current_user).exists?(genre: 5)
       .gear_list__name
         p 寝具
       = render "list", gear_num: 5
-    - if Gear.exists?(genre: 6)
+    - if Gear.mine(current_user).exists?(genre: 6)
       .gear_list__name
         p 収納
       = render "list", gear_num: 6
-    - if Gear.exists?(genre: 7)
+    - if Gear.mine(current_user).exists?(genre: 7)
       .gear_list__name
         p 燃料
       = render "list", gear_num: 7
-    - if Gear.exists?(genre: 8)
+    - if Gear.mine(current_user).exists?(genre: 8)
       .gear_list__name
         p その他
       = render "list", gear_num: 8

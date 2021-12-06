@@ -3,5 +3,9 @@ Rails.application.routes.draw do
   devise_for :users
   resources :users, only:[:show, :edit, :update]
   resources :gears, except:[:show]
-  resources :plans
+  resources :plans do
+    collection do
+      post :gear_choice
+    end
+  end
 end

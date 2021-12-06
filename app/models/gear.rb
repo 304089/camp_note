@@ -16,4 +16,5 @@ class Gear < ApplicationRecord
     "燃料": 7,
     "その他": 8
   }
+
 end

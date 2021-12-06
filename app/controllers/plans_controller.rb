@@ -1,7 +1,14 @@
 class PlansController < ApplicationController
-  before_action :set_user, except:[:new, :create, :index]
+  before_action :set_plan, except:[:new, :gear_choice, :create, :index]
 
   def new
+    @plan = Plan.new
+  end
+
+  def gear_choice
+    @plan = Plan.new(plan_params)
+    @plan.user_id = current_user.id
+    @plan.plan_gears.build
   end
 
   def create
@@ -25,7 +32,7 @@ class PlansController < ApplicationController
 
   private
   def plan_params
-    parmas.require(:plan).permit(:title, :departure_date, :return_date, :place, :check_in_time, :check_out_time, :memo, :member)
+    params.require(:plan).permit(:title, :departure_date, :return_date, :place, :check_in_time, :check_out_time, :memo, :member)
   end
 
   def set_plan
