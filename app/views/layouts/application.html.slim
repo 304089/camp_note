@@ -15,3 +15,6 @@ html
       header
         = render "layouts/header"
     = yield
+    - if user_signed_in?
+      footer
+        = render "layouts/footer"

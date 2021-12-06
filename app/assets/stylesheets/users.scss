@@ -15,11 +15,14 @@
 
 // エディット
 .user_edit_area {
-  width: 80%;
+  width: fit-content;
   margin: 0 auto;
+  position: relative;
+  top: 80px;
   border-radius: 5px;
   border: 1px solid #1e7e34;
   &__title {
+    width: 100%;
     text-align: center;
     background: #1e7e34;
     color: white;
@@ -27,6 +30,7 @@
   &__form {
     margin: 0 auto;
     &__item {
+      padding: 20px;
     }
     .edit_name input {
       width: 300px;
