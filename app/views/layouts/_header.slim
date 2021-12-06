@@ -1,1 +1,13 @@
-h1 CAMP NOTE
+- if controller.controller_name == "gears"
+  h1 ギア
+  = link_to new_gear_path do
+    i.fas.fa-plus-square
+- elsif controller.controller_name == "plans"
+  h1 キャンプ計画
+  = link_to new_plan_path do
+    i.fas.fa-plus-square
+- elsif controller.controller_name == "users"
+  h1 ユーザー
+  = link_to edit_user_path do
+    i.fas.fa-cog
+  

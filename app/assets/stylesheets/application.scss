@@ -43,9 +43,21 @@ header {
   position: fixed; /* ウィンドウを基準に画面に固定 */
   top: 0; /* 上下の固定位置を上から0pxにする */
   left: 0; /* 左右の固定位置を左から0pxにする */
+  z-index: 10;
+  position: relative;
   h1 {
     text-align: center;
     line-height: 70px;
+  }
+  i {
+    font-size: 50px;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+  }
+
+  header:nth-child(1) {
+    justify-content: center;
   }
 }
 
@@ -65,7 +77,8 @@ footer {
 
 .container {
   position: relative;
-  top: 100px;
+  top: 20px;
+  min-height: 100vh;
 }
 
 // セッションエリア
