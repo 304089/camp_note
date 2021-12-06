@@ -1,14 +1,12 @@
 .container
   .user_edit_area
-    .user_edit_area__title
-      h2  ユーザー情報編集
     .user_edit_area__form
       = form_with model:@user, local:true do |f|
-        .user_edit_area__form__item.edit_name
-          = f.label :name, "ユーザーネーム"
-          br
+        .user_edit_area__form__item
+          p ユーザーネーム
           = f.text_field :name
         .user_edit_area__form__item
+          p プロフィール画像
           = f.attachment_field :profile_image
-        .user_edit_area__form__item.text-center
+        .user_edit_area__form__item.user_edit_area__form__btn
           = f.submit "更新する", class:"btn btn-success"

@@ -17,10 +17,6 @@
 .user_edit_area {
   width: fit-content;
   margin: 0 auto;
-  position: relative;
-  top: 80px;
-  border-radius: 5px;
-  border: 1px solid #1e7e34;
   &__title {
     width: 100%;
     text-align: center;
@@ -30,10 +26,11 @@
   &__form {
     margin: 0 auto;
     &__item {
-      padding: 20px;
+      margin-top: 40px;
     }
-    .edit_name input {
-      width: 300px;
+    &__btn {
+      margin-top: 30px;
+      text-align: center;
     }
   }
 }

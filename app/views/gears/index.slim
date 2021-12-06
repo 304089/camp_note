@@ -3,63 +3,36 @@
     - if Gear.exists?(genre: 0)
       .gear_list__name
         p テント・タープ
-      - Gear.where(user_id: current_user.id, genre: 0).includes(:user).each do |gear|
-        .gear_list__item
-          = attachment_image_tag gear, :gear_image, size: "50x50", fallback: "no_image.jpg"
-          = gear.name
+      = render "list", gear_num: 0
     - if Gear.exists?(genre: 1)
       .gear_list__name
         p テーブル・チェア
-      - Gear.where(user_id: current_user.id, genre: 1).includes(:user).each do |gear|
-        .gear_list__item
-          = attachment_image_tag gear, :gear_image, size: "50x50", fallback: "no_image.jpg"
-          = gear.name
+      = render "list", gear_num: 1
     - if Gear.exists?(genre: 2)
       .gear_list__name
         p 調理道具
-      - Gear.where(user_id: current_user.id, genre: 2).includes(:user).each do |gear|
-        .gear_list__item
-          = attachment_image_tag gear, :gear_image, size: "50x50", fallback: "no_image.jpg"
-          = gear.name
+      = render "list", gear_num: 2
     - if Gear.exists?(genre: 3)
       .gear_list__name
         p 照明器具
-      - Gear.where(user_id: current_user.id, genre: 3).includes(:user).each do |gear|
-        .gear_list__item
-          = attachment_image_tag gear, :gear_image, size: "50x50", fallback: "no_image.jpg"
-          = gear.name
+      = render "list", gear_num: 3
     - if Gear.exists?(genre: 4)
       .gear_list__name
         p 焚き火道具
-      - Gear.where(user_id: current_user.id, genre: 4).includes(:user).each do |gear|
-        .gear_list__item
-          = attachment_image_tag gear, :gear_image, size: "50x50", fallback: "no_image.jpg"
-          = gear.name
+      = render "list", gear_num: 4
     - if Gear.exists?(genre: 5)
       .gear_list__name
         p 寝具
-      - Gear.where(user_id: current_user.id, genre: 5).includes(:user).each do |gear|
-        .gear_list__item
-          = attachment_image_tag gear, :gear_image, size: "50x50", fallback: "no_image.jpg"
-          = gear.name
+      = render "list", gear_num: 5
     - if Gear.exists?(genre: 6)
       .gear_list__name
         p 収納
-      - Gear.where(user_id: current_user.id, genre: 6).includes(:user).each do |gear|
-        .gear_list__item
-          = attachment_image_tag gear, :gear_image, size: "50x50", fallback: "no_image.jpg"
-          = gear.name
+      = render "list", gear_num: 6
     - if Gear.exists?(genre: 7)
       .gear_list__name
         p 燃料
-      - Gear.where(user_id: current_user.id, genre: 7).includes(:user).each do |gear|
-        .gear_list__item
-          = attachment_image_tag gear, :gear_image, size: "50x50", fallback: "no_image.jpg"
-          = gear.name
+      = render "list", gear_num: 7
     - if Gear.exists?(genre: 8)
       .gear_list__name
         p その他
-      - Gear.where(user_id: current_user.id, genre: 8).includes(:user).each do |gear|
-        .gear_list__item
-          = attachment_image_tag gear, :gear_image, size: "50x50", fallback: "no_image.jpg"
-          = gear.name
+      = render "list", gear_num: 8
