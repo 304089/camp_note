@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_12_03_115841) do
+ActiveRecord::Schema.define(version: 2021_12_06_032658) do
 
   create_table "gears", force: :cascade do |t|
     t.integer "user_id", null: false
@@ -18,6 +18,34 @@ ActiveRecord::Schema.define(version: 2021_12_03_115841) do
     t.string "introduction"
     t.integer "amount", null: false
     t.string "gear_image_id"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "plan_gears", force: :cascade do |t|
+    t.integer "plan_id"
+    t.integer "gear_id"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "plan_items", force: :cascade do |t|
+    t.integer "user_id"
+    t.integer "item_id"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "plans", force: :cascade do |t|
+    t.integer "user_id"
+    t.string "title", null: false
+    t.date "departure_date", null: false
+    t.date "return_date", null: false
+    t.string "place", null: false
+    t.time "check_in_time"
+    t.time "check_out_time"
+    t.text "memo"
+    t.integer "member", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
