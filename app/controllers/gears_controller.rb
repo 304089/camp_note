@@ -25,9 +25,6 @@ class GearsController < ApplicationController
   def update
   end
 
-  def destroy
-  end
-
   private
   def gear_params
     params.require(:gear).permit(:name, :introduction, :amount, :genre, :gear_image)

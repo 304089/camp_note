@@ -9,10 +9,13 @@
   p {
     width: 50%;
     text-align: center;
-    background: chocolate;
     font-size: 20px;
     height: 40px;
     line-height: 40px;
+    cursor: pointer;
+  }
+  &__gear {
+    background: silver;
   }
 }
 

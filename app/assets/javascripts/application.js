@@ -9,8 +9,10 @@ $(function() {
   $(function() {
     $(".detail_choice__schedule").on("click", function() {
       if ($(schedule).hide()) {
-        $(schedule).fadeIn();
+        $(schedule).show();
         $(gear).hide();
+        $(".detail_choice__schedule").css("background", "white")
+        $(".detail_choice__gear").css("background", "silver")
       }
     });
   });
@@ -18,8 +20,10 @@ $(function() {
   $(function() {
     $(".detail_choice__gear").on("click", function() {
       if ($(gear).hide()) {
-        $(gear).fadeIn();
+        $(gear).show();
         $(schedule).hide();
+        $(".detail_choice__schedule").css("background", "silver")
+        $(".detail_choice__gear").css("background", "white")
       }
     });
   });
