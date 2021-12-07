@@ -9,7 +9,7 @@ $(function() {
   $(function() {
     $(".detail_choice__schedule").on("click", function() {
       if ($(schedule).hide()) {
-        $(schedule).show();
+        $(schedule).fadeIn();
         $(gear).hide();
         $(".detail_choice__schedule").css("background", "white")
         $(".detail_choice__gear").css("background", "silver")
@@ -20,7 +20,7 @@ $(function() {
   $(function() {
     $(".detail_choice__gear").on("click", function() {
       if ($(gear).hide()) {
-        $(gear).show();
+        $(gear).fadeIn();
         $(schedule).hide();
         $(".detail_choice__schedule").css("background", "silver")
         $(".detail_choice__gear").css("background", "white")
