@@ -1,4 +1,4 @@
-- Gear.where(user_id: current_user.id, genre: gear_num).each do |gear|
+- gears.each do |gear|
   .gear_list__item
     = attachment_image_tag gear, :gear_image, size: "50x50", fallback: "no_image.jpg"
     = gear.name

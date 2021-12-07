@@ -18,10 +18,11 @@ class PlansController < ApplicationController
   end
 
   def show
+    @gears = Gear.joins(:plan_gears).where(plan_gears: { plan_id: @plan.id })
   end
 
   def index
-    @plans = Plan.where(user_id: current_user.id)
+    @plans = Plan.mine(current_user)
   end
 
   def edit

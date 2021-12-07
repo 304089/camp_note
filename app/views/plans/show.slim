@@ -1,0 +1,9 @@
+.container
+  .detail_choice
+    p.detail_choice__schedule スケジュール
+    p.detail_choice__gear ギア
+  .plan_detail
+    .plan_schedule
+      = render "schedule", plan: @plan
+    .plan_gear
+      = render "gear", gears: @gears

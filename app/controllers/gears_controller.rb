@@ -16,7 +16,7 @@ class GearsController < ApplicationController
   end
 
   def index
-    @gears = Gear.all.includes(:user)
+    @gears = Gear.mine(current_user)
   end
 
   def edit
