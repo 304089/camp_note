@@ -7,11 +7,14 @@ class PlansController < ApplicationController
 
   def gear_choice
     @plan = Plan.new(plan_params)
-    @plan.user_id = current_user.id
     @plan.plan_gears.build
   end
 
   def create
+    @plan = Plan.new(plan_params)
+    @plan.user_id = current_user.id
+    @plan.save
+    redirect_to plans_path
   end
 
   def show
@@ -32,12 +35,11 @@ class PlansController < ApplicationController
 
   private
   def plan_params
-    params.require(:plan).permit(:title, :departure_date, :return_date, :place, :check_in_time, :check_out_time, :memo, :member)
+    params.require(:plan).permit(:title, :departure_date, :return_date, :place, :check_in_time, :check_out_time, :memo, :member, gear_ids: [])
   end
 
   def set_plan
     @plan = Plan.find(params[:id])
   end
 
-  
 end
