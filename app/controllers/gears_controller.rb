@@ -23,6 +23,8 @@ class GearsController < ApplicationController
   end
 
   def update
+    @gear.update(gear_params)
+    redirect_to gear_path(@gear)
   end
 
   private

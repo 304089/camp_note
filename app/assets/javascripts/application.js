@@ -3,8 +3,8 @@
 //= require bootstrap
 //= require_tree .
 $(function() {
-  const schedule = (".plan_schedule");
-  const gear = (".plan_gear");
+  const schedule = $(".plan_schedule");
+  const gear = $(".plan_gear");
 
   $(function() {
     $(".detail_choice__schedule").on("click", function() {
@@ -24,6 +24,19 @@ $(function() {
         $(schedule).hide();
         $(".detail_choice__schedule").css("background", "silver")
         $(".detail_choice__gear").css("background", "white")
+      }
+    });
+  });
+
+  $(function(){
+    const menu = $(".menu_list")
+    $(".menu_btn").on("click", function() {
+      if ($(".menu_list").hasClass("menu_active")) {
+        $(menu).removeClass("menu_active")
+        $(menu).animate({'right':'0'},300);
+      }else{
+        $(menu).addClass("menu_active")
+        $(menu).animate({'right':'-100%'},300);
       }
     });
   });
