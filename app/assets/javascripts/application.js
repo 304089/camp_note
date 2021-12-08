@@ -32,12 +32,20 @@ $(function() {
     const menu = $(".menu_list")
     $(".menu_btn").on("click", function() {
       if ($(".menu_list").hasClass("menu_active")) {
-        $(menu).removeClass("menu_active")
+        $(menu).removeClass("menu_active");
         $(menu).animate({'right':'0'},300);
+        $(".main").css("background-color", "rgba(0,0,0,0.4)");
+        $(".close_btn").removeClass("menu_btn_hide");
+        $(".open_btn").addClass("menu_btn_hide");
+
       }else{
-        $(menu).addClass("menu_active")
+        $(menu).addClass("menu_active");
         $(menu).animate({'right':'-100%'},300);
+        $(".main").css("background-color", "transparent");
+        $(".close_btn").addClass("menu_btn_hide");
+        $(".open_btn").removeClass("menu_btn_hide");
       }
     });
   });
+
 });

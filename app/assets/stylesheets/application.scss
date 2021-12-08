@@ -83,23 +83,27 @@ footer {
   }
 }
 
-.main {
+.container {
   position: relative;
   min-height: 105vh;
   overflow-x: hidden;
 }
 
 .menu_list {
-  width: 80%;
+  width: 60%;
   min-height: 100vh;
   position: absolute;
-  top: -20px;
+  top: 0;
   right: -100%;
   background: pink;
 }
 
 .menu_active {
   position: absolute;
+}
+
+.menu_btn_hide {
+  display: none !important;
 }
 
 // セッションエリア
@@ -135,6 +139,17 @@ footer {
 }
 
 @media screen and (max-width: 425px) {
-  .container {
+  .session_form_area {
+    width: 100%;
+    &__content {
+      top: 100px;
+      width: 90%;
+      input#user_name,
+      input#user_email,
+      input#user_password,
+      input#user_password_confirmation {
+        width: 80%;
+      }
+    }
   }
 }
