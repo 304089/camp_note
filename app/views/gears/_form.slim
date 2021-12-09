@@ -15,13 +15,13 @@
     .gear_form__item
       p ギア画像
       - if controller.action_name == "new"
-        .gear_form__item__attachment
-          = attachment_image_tag gear, :gear_image, size: "100x100", fallback: "no_image_gear.png"
+        .attachment
+          = attachment_image_tag gear, :gear_image, size: "100x100", fallback: "no_image_gear.png", class: "change_file"
           = f.attachment_field :gear_image
       - elsif controller.action_name == "edit"
-        .gear_form__item__attachment
-          = attachment_image_tag gear, :gear_image, size: "100x100", fallback: "no_image_gear.png"
-          = f.attachment_field :gear_image
+        .attachment
+          = attachment_image_tag gear, :gear_image, size: "100x100", fallback: "no_image_gear.png", class: "change_file"
+          = f.attachment_field :gear_image, class: "myfile"
     .gear_form__item.gear_form__btn
       - if controller.action_name == "new"
         = f.submit "登録", class: "btn btn-success"

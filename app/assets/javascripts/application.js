@@ -47,5 +47,21 @@ $(function() {
       }
     });
   });
+});
 
+$(function() {
+  $('#gear_gear_image').on('change', function (e) {
+    const reader = new FileReader();
+    reader.onload = function (e) {
+      $(".change_file").attr('src', e.target.result);
+    }
+    reader.readAsDataURL(e.target.files[0]);
+  });
+  $('#user_profile_image').on('change', function (e) {
+    const reader = new FileReader();
+    reader.onload = function (e) {
+      $(".change_file").attr('src', e.target.result);
+    }
+    reader.readAsDataURL(e.target.files[0]);
+  });
 });
