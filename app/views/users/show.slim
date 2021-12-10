@@ -2,9 +2,10 @@
   .user_show_area
     - if @user == current_user
       .profile_area
-        = link_to edit_user_path(@user),data: { confirm: '部活をやめますか？' }
+        = link_to edit_user_path(@user)
           = render "profile", user: @user
     - else
       .profile_area
         = render "profile", user: @user
     = link_to "ログアウト", destroy_user_session_path
+= render "profile", user: @user
